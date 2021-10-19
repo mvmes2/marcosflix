@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 .login--container {
@@ -103,4 +111,38 @@
 
 .login--container img {
   padding-left: 2%;
+}
+
+.moviesection {
+  margin-bottom: 30px;
+}
+
+.moviesection h2 {
+  margin: 0px 0px 0px 30px;
+}
+
+.moviesection--listarea {
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.moviesection--list {
+  width: 99999px;
+}
+
+.moviesection--item {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.moviesection--item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.3s;
+  height: 16rem;
+}
+
+.moviesection--item img:hover {
+  transform: scale(1);
 }
