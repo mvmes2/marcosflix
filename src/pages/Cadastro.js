@@ -63,7 +63,7 @@ const Cadastro = () => {
        getSpanEmail.innerHTML = '<i class="uil uil-check checked-ok"></i>';
     } else if((e.target.id === 'email' && !email.checkValidity()) || email.value.length < 1) {
       emailOk = false;
-      <i class="uil uil-times"></i>
+      <i className="uil uil-times"></i>
       getSpanEmail.innerHTML = '<i class="uil uil-times checked-error"></i>';
       getBtn.style.visibility = 'hidden';
     }

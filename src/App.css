@@ -126,10 +126,6 @@ body {
   padding-left: 30px;
 }
 
-.moviesection--list {
-  width: 99999px;
-}
-
 .moviesection--item {
   display: inline-block;
   width: 150px;
@@ -276,4 +272,102 @@ header {
 footer {
   margin: 50px 0;
   text-align: center;
+}
+
+.moviesection-leftArrow-img,
+.moviesection-rightArrow-img {
+  font-size: 60px;
+}
+
+.moviesection-leftArrow,
+.moviesection-rightArrow {
+  position: absolute;
+  margin-top: 13px;
+  width: 40px;
+  height: 230px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.moviesection-leftArrow {
+  left: 0;
+}
+.moviesection-rightArrow {
+  right: 0;
+}
+
+.moviesection:hover .moviesection-leftArrow,
+.moviesection:hover .moviesection-rightArrow {
+  opacity: 1;
+  background-color: rgba(14,14,14, 0.5);
+}
+
+.moviesection--list {
+  transition: all ease 0.7s;
+}
+
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 111;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading img {
+  width: 50%;
+}
+
+@media (max-width: 760px) {
+  .moviesection-leftArrow,
+  .moviesection-rightArrow {
+    opacity: 1;
+    background-color: rgba(14,14,14, 0.5);
+  }
+
+  .draft {
+    height: 90vh;
+  }
+
+  .lists {
+    margin-top: -40px;
+  }
+
+  .draft--horizontal-fade {
+    padding-top: 300px;
+  }
+
+  .draft--name { 
+    font-size: 40px;
+  }
+
+  .draft--info {
+    font-size: 16px;
+  }
+
+  .draft--description {
+    font-size: 14px;
+    width: 80%;
+    margin-right: 30px;
+  }
+
+  .draft--btn-assistir,
+  .draft--btn-list {
+    font-size: 16px;
+  }
+
+  .draft--genres {
+    font-size: 14px;
+  }
+
 }

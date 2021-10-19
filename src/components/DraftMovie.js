@@ -7,6 +7,11 @@ const Draftmovie = ({ item }) => {
     genres.push(item.genres[index].name);
   }
 
+  let description = item.overview;
+  if(description.length > 250) {
+    description = description.substring(0, 250) + '...';
+  }
+
   return (
     <section className="draft" style={{
       backgroundSize: 'cover',
@@ -20,7 +25,7 @@ const Draftmovie = ({ item }) => {
               <div className="draft--points">{ item.vote_average } pontos</div>
               <div className="draft--year">{firstDate.getFullYear()}</div>
               <div className="draft--seasons">{ item.number_of_seasons } temporada{item.number_of_seasons !== 1 ? 's' : '' }</div>
-              <div className="draft--description">{ item.overview }</div>
+              <div className="draft--description">{description}</div>
               <div className="draft--buttons">
               </div>
                 <a href="" className="draft--btn-assistir">► Assistir</a>

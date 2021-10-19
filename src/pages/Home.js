@@ -5,6 +5,7 @@ import { getHomeList, getMovieInfo } from '../services/Api_Tmdb';
 import Moviesection from '../components/MovieSection';
 import Draftmovie from '../components/DraftMovie';
 import Header from '../components/Header';
+import loading from '../imgs/loading.gif';
 
 
 const Home = () => {
@@ -30,13 +31,14 @@ const Home = () => {
   useEffect(() => {
     const loadAll = async () => {
       const list = await getHomeList();
-      setMovieList(list);
+      setTimeout(() => { setMovieList(list); }, 300)
 
       const originals = list.filter(item => item.pointer === 'originals');
       const randonPickUp = Math.floor(Math.random() * (originals[0].items.results.length));
       const pickedMovie = originals[0].items.results[randonPickUp];
       const choosenMovie = await getMovieInfo(pickedMovie.id, 'tv');
       setDraftData(choosenMovie);
+      console.log(choosenMovie)
     }
   
     loadAll();
@@ -69,11 +71,16 @@ const Home = () => {
       </section>
       <section className="footer">
         <footer>
-          <span class="footer__copy" role="img" aria-label="copyRight">
+          <span className="footer__copy" role="img" aria-label="copyRight">
             Direitos de imagem para Netflix &#169; Desenvolvido por MarcosMantovani. All rights reserved<br/>Dados pegos do site ThemovieDB.org
             </span>
         </footer>
       </section>
+      { movieList <= 0 && 
+        <div className="loading">
+          <img alt="carregando" src={loading} />
+        </div>      
+      }
     </div>
   );
 }
