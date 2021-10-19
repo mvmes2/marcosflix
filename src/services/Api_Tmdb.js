@@ -52,6 +52,25 @@ const getHomeList = async () => {
       ]
   }
 
+  const getMovieInfo = async (movieId, type) => {
+    let info = {};
+      if(movieId) {
+        switch(type) {
+          case 'movie':
+              info = await initialFetch(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+            break;
+          case 'tv':
+            info = await initialFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+            break;
+          default:
+              info = "error at request api";
+            break;
+        }
+      }
+    return info;
+  }
+
 export {
-  getHomeList
+  getHomeList,
+  getMovieInfo
 }
