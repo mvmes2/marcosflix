@@ -5,8 +5,8 @@
 }
 
 .login--container {
-  background-color: #141414;
-  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/68c9706b-acd1-4472-bb1d-ef3ca933154c/e75d1650-32dd-4fc3-8e0f-93e254557b2c/BR-pt-20211011-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-color: rgba(0,0,0, 0.8);
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/68c9706b-acd1-4472-bb1d-ef3ca933154c/e75d1650-32dd-4fc3-8e0f-93e254557b2c/BR-pt-20211011-popsignuptwoweeks-perspective_alpha_website_large.jpg");
   height: 100vh;
   width: 100%;
 }

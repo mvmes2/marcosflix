@@ -7,6 +7,7 @@ let senhaOk = false;
 let senha2Ok = false;
 
 const Cadastro = () => {
+  const history = useHistory();
   const [update, setUpdate] = useState(false);
   const userInfo = {
     nome: '',
@@ -153,7 +154,7 @@ const Cadastro = () => {
         console.log(getUser[0].senha)
         console.log(loginInfo.senha)
         if(loginInfo.senha === getUser[0].senha) {
-          return window.alert("pode entrar Boychecks");
+          return history.push('/Home');
         } else { return window.alert("senha inválida!") }
       } else { return window.alert("email inválido") }
     } else { return window.alert('Usuário não cadastrado!') }
@@ -239,7 +240,6 @@ const Cadastro = () => {
     <div className="form--box">
       <h1 className="login--text">{ changeTrigger === "entrar" ? 'Entrar' : "Cadastro" }</h1>
       { changeTrigger === "entrar" ? loginRender() : signUpRender() }
-      {console.log(changeTrigger)}
     </div>
   );
 }
