@@ -23,6 +23,11 @@ const Cadastro = () => {
   const [loginInfo, setLoginInfo] = useState(userLoginInfo);
 
   useEffect(() => {
+    setSignupInfo(userInfo);
+      nomeOk = false;
+      emailOk = false;
+      senhaOk = false;
+      senha2Ok = false;
     if(changeTrigger === 'cadastrar') {
       const getBtn = document.querySelector('.entrar--btn-3');
       getBtn.style.visibility = 'hidden';
@@ -30,6 +35,11 @@ const Cadastro = () => {
   }, [changeTrigger])
 
   useEffect(() => {
+    nomeOk = false;
+    emailOk = false;
+    senhaOk = false;
+    senha2Ok = false;
+    setSignupInfo(userInfo);
     console.log('effecti')
     setUpdate(false);
   }, [update])
@@ -78,14 +88,14 @@ const Cadastro = () => {
     if(e.target.id === 'senha2' && password.value.length >= 6 && password.value === password2.value) {
       senha2Ok = true;
       getSpanSenha2.innerHTML = '<i class="uil uil-check checked-ok"></i>';
-    } else if(e.target.id === 'senha2' && password.value.length < 6 && password.value !== password2.value) {
+    } else if((e.target.id === 'senha2' && password.value.length < 6) || password.value !== password2.value) {
       senha2Ok = false;
       getSpanSenha2.innerHTML = '<i class="uil uil-times checked-error"></i>';
       getBtn.style.visibility = 'hidden';
     }
-    if(nomeOk && emailOk && senhaOk && senha2Ok) {
+    if(nomeOk && emailOk && senha2Ok && senhaOk) {
       getBtn.style.visibility = 'visible';
-    }
+    } else { getBtn.style.visibility = 'hidden'; }
   }
 
   function loginInputOnChangeController(e) {

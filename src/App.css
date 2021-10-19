@@ -328,6 +328,20 @@ footer {
   width: 50%;
 }
 
+.renderHomer {
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 760px) {
   .moviesection-leftArrow,
   .moviesection-rightArrow {
@@ -368,6 +382,23 @@ footer {
 
   .draft--genres {
     font-size: 14px;
+  }
+
+  .login--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+  .login--container img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+  }
+
+  .login--info-box {
+    height: 63vh;
   }
 
 }
