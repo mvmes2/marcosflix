@@ -10,6 +10,22 @@ import Header from '../components/Header';
 const Home = () => {
   const [movieList, setMovieList] = useState([]);
   const [draftData, setDraftData] = useState(null);
+  const [activeHeaderControl, setActiveHeaderControl] = useState(false);
+
+  useEffect(() => {
+    const scrollYControl = () => {
+      if(window.scrollY > 15) {
+        setActiveHeaderControl(true);
+      } else {
+        setActiveHeaderControl(false);
+      }
+    }
+    window.addEventListener('scroll', scrollYControl);
+
+    return () => {
+      window.removeEventListener('scrol', scrollYControl);
+    }
+  }, []);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -24,7 +40,7 @@ const Home = () => {
     }
   
     loadAll();
-  }, [])
+  }, []);
   
   const sfx = {
     main: new Howl({
@@ -40,7 +56,7 @@ const Home = () => {
 
   return (
     <div className="page">
-      <Header />
+      <Header control={ activeHeaderControl }/>
       { draftData && 
           <Draftmovie item={ draftData }/>
       }
@@ -50,6 +66,13 @@ const Home = () => {
               <Moviesection key={ index } title={ item.title } list={ item.items }/>
           ))
         }
+      </section>
+      <section className="footer">
+        <footer>
+          <span class="footer__copy" role="img" aria-label="copyRight">
+            Direitos de imagem para Netflix &#169; Desenvolvido por MarcosMantovani. All rights reserved<br/>Dados pegos do site ThemovieDB.org
+            </span>
+        </footer>
       </section>
     </div>
   );
