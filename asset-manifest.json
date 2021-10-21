@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/marcosflix/static/css/main.4b6e5365.chunk.css",
-    "main.js": "/marcosflix/static/js/main.506a3ad7.chunk.js",
-    "main.js.map": "/marcosflix/static/js/main.506a3ad7.chunk.js.map",
+    "main.css": "/marcosflix/static/css/main.72ba9980.chunk.css",
+    "main.js": "/marcosflix/static/js/main.671bfac3.chunk.js",
+    "main.js.map": "/marcosflix/static/js/main.671bfac3.chunk.js.map",
     "runtime-main.js": "/marcosflix/static/js/runtime-main.235a4bb9.js",
     "runtime-main.js.map": "/marcosflix/static/js/runtime-main.235a4bb9.js.map",
     "static/js/2.d7c2757c.chunk.js": "/marcosflix/static/js/2.d7c2757c.chunk.js",
     "static/js/2.d7c2757c.chunk.js.map": "/marcosflix/static/js/2.d7c2757c.chunk.js.map",
     "index.html": "/marcosflix/index.html",
-    "static/css/main.4b6e5365.chunk.css.map": "/marcosflix/static/css/main.4b6e5365.chunk.css.map",
+    "static/css/main.72ba9980.chunk.css.map": "/marcosflix/static/css/main.72ba9980.chunk.css.map",
     "static/js/2.d7c2757c.chunk.js.LICENSE.txt": "/marcosflix/static/js/2.d7c2757c.chunk.js.LICENSE.txt",
     "static/media/loading.cc57505c.gif": "/marcosflix/static/media/loading.cc57505c.gif",
     "static/media/logo.489974ab.png": "/marcosflix/static/media/logo.489974ab.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.235a4bb9.js",
     "static/js/2.d7c2757c.chunk.js",
-    "static/css/main.4b6e5365.chunk.css",
-    "static/js/main.506a3ad7.chunk.js"
+    "static/css/main.72ba9980.chunk.css",
+    "static/js/main.671bfac3.chunk.js"
   ]
 }
