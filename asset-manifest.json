@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/marcosflix/static/css/main.f766ced6.chunk.css",
-    "main.js": "/marcosflix/static/js/main.2e1ba843.chunk.js",
-    "main.js.map": "/marcosflix/static/js/main.2e1ba843.chunk.js.map",
+    "main.js": "/marcosflix/static/js/main.25cde66b.chunk.js",
+    "main.js.map": "/marcosflix/static/js/main.25cde66b.chunk.js.map",
     "runtime-main.js": "/marcosflix/static/js/runtime-main.235a4bb9.js",
     "runtime-main.js.map": "/marcosflix/static/js/runtime-main.235a4bb9.js.map",
     "static/js/2.d7c2757c.chunk.js": "/marcosflix/static/js/2.d7c2757c.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.235a4bb9.js",
     "static/js/2.d7c2757c.chunk.js",
     "static/css/main.f766ced6.chunk.css",
-    "static/js/main.2e1ba843.chunk.js"
+    "static/js/main.25cde66b.chunk.js"
   ]
 }
